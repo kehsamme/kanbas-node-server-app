@@ -14,9 +14,7 @@ import AssignmentRoutes from './Kanbas/Assignments/routes.js';
 const app = express()
 app.use(cors({
     credentials: true,
-    // origin: process.env.NETLIFY_URL || "http://localhost:3000",
-    origin: "*",
-
+    origin: process.env.NETLIFY_URL || "http://localhost:3000",
   }
  ));                    // make sure cors is used right after creating the app
 const sessionOptions = {
@@ -44,5 +42,5 @@ AssignmentRoutes(app);
 
 Hello(app)
 
-app.listen(4000);
-// app.listen(process.env.PORT || 4000)
+// app.listen(4000);
+app.listen(process.env.PORT || 4000)
