@@ -1,7 +1,7 @@
 import Database from "../Database/index.js";
 
 export const getAllEnrollments = () => {
-  return enrollments;
+  return Database.enrollments;
 };
 
 export const findEnrollmentsForUser = (userId) => {
