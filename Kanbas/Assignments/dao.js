@@ -1,6 +1,6 @@
 import Database from "../Database/index.js";
 
-export function udpateAssignment(assignmentId, assignmentUpdates) {
+export function updateAssignment(assignmentId, assignmentUpdates) {
     const { assignments } = Database;
     const assignment = assignments.find((assignment) => assignment._id === assignmentId);
     Object.assign(assignment, assignmentUpdates);
@@ -13,12 +13,12 @@ export function deleteAssignment(assignmentId) {
    }
    
 export function createAssignment(assignment) {
-    console.log("Data received in DAO:", assignment);
+   // console.log("Data received in DAO:", assignment);
 
     const newAssignment = { ...assignment, _id: Date.now().toString() };
-    console.log("Assignment being added to database:", newAssignment);
+   // console.log("Assignment being added to database:", newAssignment);
     Database.assignments = [...Database.assignments, newAssignment];
-    console.log("Updated assignments:", Database.assignments); 
+    //console.log("Updated assignments:", Database.assignments); 
     return newAssignment;
   }
   

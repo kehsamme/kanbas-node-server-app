@@ -23,10 +23,10 @@ export default function AssignmentRoutes(app) {
         const assignment = {
             ...req.body, // Assignment data sent by the client
         };
-        console.log("Received assignment:", assignment); // Log incoming data
+       // console.log("Received assignment:", assignment); // Log incoming data
     
         const newAssignment = assignmentsDao.createAssignment(assignment);
-        console.log("Created assignment:", newAssignment); // Log created assignment
+        //console.log("Created assignment:", newAssignment); // Log created assignment
     
         res.send(newAssignment); // Send back the created assignment
     });
