@@ -7,6 +7,7 @@ export function deleteModule(moduleId) {
  
 export function createModule(module) {
   delete module._id
+  console.log("in create module server")
   return model.create(module);
   }
   
@@ -14,6 +15,7 @@ export function findModulesForCourse(courseId) {
   return model.find({ course: courseId });
 }
 export function updateModule(moduleId, moduleUpdates) {
+  console.log("in update module server")
   return model.updateOne({ _id: moduleId }, moduleUpdates);
 }
 

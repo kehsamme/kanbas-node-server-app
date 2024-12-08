@@ -11,6 +11,8 @@ import session from "express-session";
 import ModuleRoutes from "./Kanbas/Modules/routes.js";
 import AssignmentRoutes from './Kanbas/Assignments/routes.js';
 import EnrollmentRoutes from './Kanbas/Enrollments/routes.js';
+import QuestionsRoutes from './Kanbas/Questions/routes.js';
+import QuizzesRoutes from './Kanbas/Quizzes/routes.js';
 
 
 // const CONNECTION_STRING = "mongodb://127.0.0.1:27017/kanbas"
@@ -48,7 +50,8 @@ CourseRoutes(app);
 EnrollmentRoutes(app);
 ModuleRoutes(app);
 AssignmentRoutes(app);
-
+// QuestionsRoutes(app);
+QuizzesRoutes(app);
 Hello(app)
 
 // app.listen(4000);

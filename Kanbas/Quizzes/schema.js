@@ -1,0 +1,33 @@
+import mongoose from "mongoose";
+const schema = new mongoose.Schema({
+    number: {type: String, required: true, unique: true},
+    title: {type: String, required: true},
+    courseId: {type: String, required: true},
+    type: {
+        type: String,
+        enum: ["Graded Quiz", "Practice Quiz", "Graded Survey", "Ungraded Survey"],
+        required:true,
+        default: "Graded Quiz"},
+    points: {type: Number, required: true},
+    questionNumber: {type: Number, requried: true},
+    published: {type: Boolean, required: true},
+    group: {type: String,
+        enum: ["QUIZZES", "EXAMS", "ASSIGNMENTS", "PROJECT"],
+        default: "QUIZZES"},
+    shuffleAnswers: {type: Boolean, default: true},
+    timelimit: {type: Number, default: 20},
+    mutipleAttempts: {type: Boolean, default: false},
+    showAnswers: {type: String},
+    accessCode: {type: String},
+    oneQuestionataTime: {type: Boolean, default: true},
+    webCam: {type: Boolean, default: false},
+    lockQuestion: {type: Boolean, default: false},
+    dueDate: {type: Date},
+    availableFromDate: {type: Date},
+    availableUntilDate: {type: Date},
+    responses: {type: String},
+    viewResult: {type: Boolean},
+    course: { type: mongoose.Schema.Types.ObjectId, ref: "CourseModel" },
+  },
+  { collection: "quizzes" });
+export default schema;
