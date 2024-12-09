@@ -4,13 +4,13 @@ export default function QuizRoutes(app) {
 
  app.delete("/api/quizzes/:quizId", async (req, res) => {
    const { quizId } = req.params;
-   const status = await dao.deleteModule(quizId);
+   const status = await dao.deleteQuiz(quizId);
    res.send(status);
  });
  app.put("/api/quizzes/:quizId", async (req, res) => {
   const { quizId } = req.params;
   const quizUpdates = req.body;
-  const status = await modulesDao.updateQuiz(quizId, quizUpdates);
+  const status = await dao.updateQuiz(quizId, quizUpdates);
   res.send(status);
 });
 }
