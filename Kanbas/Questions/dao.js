@@ -26,10 +26,10 @@ export function findQuestionsForQuiz(quizId) {
     console.log("in question",quizId);
     return model.find({ quiz: quizId });
 }
-export function deleteQuiz(questionId) {
+export function deleteQuestion(questionId) {
     return model.deleteOne({ _id: questionId });
     }
-export function updateQuiz(questionId, questionUpdates) {
+export function updateQuestion(questionId, questionUpdates) {
     return model.updateOne({ _id: questionId }, questionUpdates);
 }
   
