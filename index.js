@@ -50,8 +50,8 @@ CourseRoutes(app);
 EnrollmentRoutes(app);
 ModuleRoutes(app);
 AssignmentRoutes(app);
-// QuestionsRoutes(app);
 QuizzesRoutes(app);
+QuestionsRoutes(app);
 Hello(app)
 
 // app.listen(4000);
