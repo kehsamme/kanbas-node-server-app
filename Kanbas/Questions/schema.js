@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const questionSchema = new mongoose.Schema(
   {
-    number: { type: String, required: true, unique: true },
+    number: String,
     quiz: { type: mongoose.Schema.Types.ObjectId, ref: "QuizModel" },
     questionType: {
       type: String,

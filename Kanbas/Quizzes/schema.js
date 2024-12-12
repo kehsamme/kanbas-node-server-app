@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 const schema = new mongoose.Schema({
-    number: {type: String, required: true, unique: true},
+    // number: {type: String, required: true, unique: true},
+    number: String,
     title: {type: String, required: true},
     courseId: {type: String, required: true},
     type: {
